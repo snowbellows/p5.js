@@ -1082,7 +1082,13 @@ p5.Image.prototype.numFrames = function() {
  */
 p5.Image.prototype.play = function() {
   if (this.gifProperties) {
-    this.gifProperties.playing = true;
+    if (this.gifProperties.displayIndex < this.gifProperties.frames.length) {
+      this.gifProperties.playing = true;
+    } else {
+      console.log(
+        "Cannot play a GIF that has finished it's loop, try calling .reset()"
+      );
+    }
   }
 };
 
