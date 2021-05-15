@@ -228,7 +228,11 @@ p5.Image.prototype._animateGif = function(pInst) {
   if (props.lastChangeTime === 0) {
     props.lastChangeTime = curTime;
   }
-  if (props.playing) {
+  if (
+    props.playing &&
+    this.gifProperties.displayIndex < this.gifProperties.frames.length &&
+    this.gifProperties.displayIndex >= 0
+  ) {
     props.timeDisplayed = curTime - props.lastChangeTime;
     const curDelay = props.frames[props.displayIndex].delay;
     if (props.timeDisplayed >= curDelay) {
