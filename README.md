@@ -61,6 +61,7 @@ Anyone interested can volunteer to be a steward! There are no specific requireme
 * [@stalgiag](https://github.com/stalgiag)
 * [@montoyamoraga](https://github.com/montoyamoraga)
 * [@dhowe](https://github.com/dhowe)
+* [@rahulm2310](https://github.com/rahulm2310)
 
 | Area                              | Steward(s)                                   |
 | :-------------------------------- | :------------------------------------------- |
@@ -79,7 +80,7 @@ Anyone interested can volunteer to be a steward! There are no specific requireme
 | Build Process/Unit Testing        | outofambit                                   |
 | Localization Tools                | outofambit                                   |
 | Friendly Errors                   | outofambit                                   |
-| [Website](https://github.com/processing/p5.js-website) | limzykenneth            |
+| [Website](https://github.com/processing/p5.js-website) | limzykenneth<br/>rahulm2310             |
 
 ## Contributors
 
@@ -496,6 +497,7 @@ We recognize all types of contributions. This project follows the [all-contribut
   </tr>
   <tr>
     <td align="center"><a href="http://olusegunsamson.me"><img src="https://avatars.githubusercontent.com/u/40327060?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mainstreamdev</b></sub></a><br /><a href="https://github.com/processing/p5.js/issues?q=author%3Acryptochap" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/ageonic"><img src="https://avatars.githubusercontent.com/u/79060613?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron George</b></sub></a><br /><a href="https://github.com/processing/p5.js/issues?q=author%3Aageonic" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
