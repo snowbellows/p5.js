@@ -50,3 +50,59 @@ suite('p5.Image', function() {
     });
   });
 });
+
+suite('animated gifs', function() {
+  var myp5;
+
+  setup(function(done) {
+    new p5(function(p) {
+      p.setup = function() {
+        myp5 = p;
+        done();
+      };
+    });
+  });
+
+  teardown(function() {
+    myp5.remove();
+  });
+
+  var imagePath = '';
+
+  setup(function disableFileLoadError() {
+    sinon.stub(p5, '_friendlyFileLoadError');
+  });
+
+  teardown(function restoreFileLoadError() {
+    p5._friendlyFileLoadError.restore();
+  });
+
+  test('should gracefully handle calling play() on finished single loop GIFs', function() {
+    imagePath = 'unit/assets/single-loop-gif-example';
+
+    // var mySketch = function(this_p5) {
+    // this_p5.preload = function() {
+    return new Promise(function(resolve, reject) {
+      myp5.loadImage(imagePath, resolve, reject);
+    }).then(function(img) {
+      // Set gifProperties to imitate a gif that has finished playing
+      img.gifProperties.displayIndex = img.gifProperties.frames.length;
+      img.gifProperties.loopCount = img.gifProperties.loopLimit;
+      img.gifProperties.playing = false;
+
+      img.play();
+      assert.isFalse(img.playing);
+    });
+    // };
+
+    // this_p5.setup = function() {
+
+    // };
+
+    // this_p5.draw = function() {
+
+    // };
+    // };
+    // new p5(mySketch, null, false);
+  });
+});
